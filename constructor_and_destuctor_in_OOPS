@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void Takeinput() {
+	#ifndef SWARUP
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+	#endif
+}
+class Person{
+public:
+	Person() {
+		cout << "parent class constructor called first." << endl;
+	}
+	~Person() {
+		cout << "parent class destuctor is called second." << endl;
+	}
+};
+
+class Student : public Person{
+public:
+	Student() {
+		cout << "child class constructor is called second." << endl;
+	}
+	~Student() {
+		cout << "child class destuctor is called first." << endl;
+	}
+};
+
+int main() {
+	Takeinput();
+	ios_base::sync_with_stdio(0);
+    cin.tie(0); cout.tie(0);
+    Student swarup;
+}
